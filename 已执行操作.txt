@@ -1,6 +1,0 @@
-已通过修改apache httpd.conf隐藏了url中的入口文件
-通过修改入口文件、绑定模块（实现单模块）隐藏了url中的模块
-在管理和应用里均将默认返回设为了json
-修改了apache vhosts将默认网站根目录设为了public
-修改了route中的根路径为index.php/index/index/index
-配置了database.php，修改了数据表前缀使模型类文件直接对应数据表
