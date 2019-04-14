@@ -7,8 +7,7 @@
  */
 
 namespace app\index\logic;
-
-
+use app\index\controller\Charts;
 use app\index\model\History;
 use app\index\model\User;
 
@@ -32,6 +31,7 @@ class Sethistory
         ]);
         $history->save();
         User::where('id',0)->setInc('score',$money);
+        Charts::auto_set_chart();
         return ['log'=>'success'];
     }
 }

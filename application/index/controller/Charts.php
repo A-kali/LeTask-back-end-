@@ -42,7 +42,7 @@ class Charts extends Controller
         return self::get_chart();
     }
 
-    protected function auto_set_chart()
+    public static function auto_set_chart()
     {
         $consume = -History::whereTime('date', '>', date('Y-m-d H:i:s', strtotime('-1 day 23:59:59', time())))
             ->where('money', '<', '0')
